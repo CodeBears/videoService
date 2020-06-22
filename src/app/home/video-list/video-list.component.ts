@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./video-list.component.scss']
 })
 export class VideoListComponent implements OnInit {
-
+  fakeArray = new Array(40);
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
