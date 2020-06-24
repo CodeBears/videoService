@@ -1,24 +1,32 @@
 <header>
-  <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
-    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-  </button>
-  <span>streamingWeb</span>
+  <div class="toggleMenu">
+    <button type="button" mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="title">BroVideo</span>
+  </div>
+  <label for="search" class="search">
+    <i class="fas fa-search"></i>
+    <input name="search" class="input-search" placeholder="Search..." type="text">
+  </label>
+  <button mat-raised-button (click)="toggle()"> 搜尋</button>
 
-  <input type="text">
-  <i class="fas fa-camera"></i>
 </header>
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item>Link 1</a>
-      <a mat-list-item>Link 2</a>
-      <a mat-list-item>Link 3</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
 
+<div class="content">
+  <div class="navBar" [ngClass]="phone ? 'navBar-hidden' : ''">
+    <nav [ngClass]="phone ? 'nav-hidden' : ''">
+      <ul>
+        <li>Menu 1</li>
+        <li>Menu 2</li>
+        <li>Menu 3</li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <div class="right-content" style="flex:8">
     <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  </div>
+
+</div>

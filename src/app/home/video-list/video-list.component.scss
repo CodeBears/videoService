@@ -10,3 +10,13 @@
     flex-wrap: wrap;
 
 }
+
+@media (max-width: 768px) {
+
+  .video-list{
+    width: 100%;
+    height: 30%;
+  }
+
+}
+

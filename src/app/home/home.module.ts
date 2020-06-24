@@ -10,10 +10,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { VideoPlayComponent } from './video-play/video-play.component';
 
 
 @NgModule({
-  declarations: [VideoListComponent, CategoryNavComponent],
+  declarations: [VideoListComponent, CategoryNavComponent, VideoPlayComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
