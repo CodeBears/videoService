@@ -27,6 +27,7 @@ z-index: 100;
 height: 60px;
 }
 nav {
+  z-index: 9999;
   position: fixed;
   height: 100vh;
   top: 60px;
@@ -67,10 +68,11 @@ margin-right: 20px;
   display: flex;
 }
 .navBar {
-  flex:1
+  width: 150px;
 }
+
 .navBar-hidden {
-  flex: 0
+  flex: 0;
 }
 .toggleMenu {
   position: absolute;
@@ -81,16 +83,16 @@ margin-right: 20px;
   top: 80px;
   display: flex;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .toggleMenu {
     position: static;
   }
   .title{
     display: none;
   }
-  nav {
-    left: -150px;
-  }
+  // nav {
+  //   left: -150px;
+  // }
   .content {
     display: block;
   }

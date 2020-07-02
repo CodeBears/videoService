@@ -1,7 +1,7 @@
 <header>
   <div class="toggleMenu">
-    <button type="button" mat-icon-button>
-      <mat-icon>menu</mat-icon>
+    <button type="button" mat-icon-button  (click)="toggle()">
+      <mat-icon >menu</mat-icon>
     </button>
     <span class="title">BroVideo</span>
   </div>
@@ -9,7 +9,7 @@
     <i class="fas fa-search"></i>
     <input name="search" class="input-search" placeholder="Search..." type="text">
   </label>
-  <button mat-raised-button (click)="toggle()"> 搜尋</button>
+  <button mat-raised-button> 搜尋</button>
 
 </header>
 
@@ -17,9 +17,7 @@
   <div class="navBar" [ngClass]="phone ? 'navBar-hidden' : ''">
     <nav [ngClass]="phone ? 'nav-hidden' : ''">
       <ul>
-        <li>Menu 1</li>
-        <li>Menu 2</li>
-        <li>Menu 3</li>
+        <li><a routerLink="/home">首頁</a></li>
       </ul>
     </nav>
   </div>
