@@ -35,6 +35,20 @@ nav {
   background-color: #333;
   color: #fff;
   width: 150px;
+  ul{
+   list-style: none;
+   padding: 0px;
+   li{
+     cursor: pointer;
+     padding-left: 10px;
+     color:#eee;
+     text-decoration: none;
+     &:hover{
+      background-color: lighten(#333, 10%);
+       color: #fff;
+     }
+   }
+  }
 }
 
 .fa-search {
@@ -64,7 +78,7 @@ margin-right: 20px;
 }
 .content {
   position: relative;
-  top: 80px;
+  top: 60px;
   display: flex;
 }
 .navBar {
@@ -77,11 +91,6 @@ margin-right: 20px;
 .toggleMenu {
   position: absolute;
   left: 0px;
-}
-.content {
-  position: relative;
-  top: 80px;
-  display: flex;
 }
 @media (max-width: 600px) {
   .toggleMenu {

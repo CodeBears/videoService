@@ -12,16 +12,19 @@ body {
 }
 
 .player {
-  max-width: 750px;
-  border: 5px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
   position: relative;
   font-size: 0;
   overflow: hidden;
+  margin: 0px;
+  height: 80vh;
+  background-color: black;
 }
 
 .player__video {
   width: 100%;
+  height: 100%;
+
 }
 
 .player__controls{
@@ -69,4 +72,15 @@ button:hover {
 button:focus {
   border: 0;
 }
+.volume__dialog{
+  display: none;
+  background-color: white;
+  position: relative;
+  top: 0px ;
+  height: 100%;
+  width: 100%;
+}
 
+// .volume__button:focus .volume__dialog{
+//   display: block;
+// }
